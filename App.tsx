@@ -32,12 +32,16 @@ const RootNav = () => {
         },
       }}
       ref={navigationRef}>
-      {Platform.OS === 'android' && (
-        <StatusBar
-          barStyle={darkmode ? 'light-content' : 'dark-content'}
-          backgroundColor={background}
-        />
-      )}
+      <StatusBar
+        barStyle={
+          Platform.OS === 'android'
+            ? darkmode
+              ? 'light-content'
+              : 'dark-content'
+            : 'light-content'
+        }
+        backgroundColor={background}
+      />
       <MainStack />
     </NavigationContainer>
   );
