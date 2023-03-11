@@ -48,7 +48,7 @@ const InventoryListScreen = ({ navigation }: Props) => {
           </Box>
         </Box>
         <Box paddingHorizontal="l" marginTop="s">
-          <Text variant="regular">Items Count: {getItems().length}</Text>
+          <Text variant="regular">Items Count: {getItems()?.length || 0}</Text>
         </Box>
         <Box flex={1} marginVertical="m" paddingHorizontal="l">
           <ScrollView>
@@ -59,7 +59,11 @@ const InventoryListScreen = ({ navigation }: Props) => {
                   new Date(a.last_modified).getTime(),
               )
               .map(i => (
-                <InventoryItem key={i.date_created} item={i} />
+                <InventoryItem
+                  key={i.date_created}
+                  item={i}
+                  navigation={navigation}
+                />
               ))}
           </ScrollView>
         </Box>

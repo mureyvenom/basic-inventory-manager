@@ -17,6 +17,7 @@ const ConfirmModal = ({ visible, closeModal, confirmAction, title }: Props) => {
       isVisible={visible}
       onBackdropPress={closeModal}
       propagateSwipe
+      testID="confirmation-modal"
       style={{ justifyContent: 'center' }}>
       <Box marginHorizontal="l" padding="l" backgroundColor="background">
         <Text variant="medium" color="foreground" textAlign="center">

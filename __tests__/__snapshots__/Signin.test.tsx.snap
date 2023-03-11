@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          [
+            {},
+          ]
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#DDDDDD",
+                "fontSize": 60,
+                "marginBottom": 40,
+                "marginTop": 80,
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          Sign In
+        </Text>
+        <View
+          style={
+            [
+              {
+                "paddingHorizontal": 24,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              [
+                {
+                  "marginBottom": 24,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                [
+                  {
+                    "alignItems": "center",
+                    "backgroundColor": "#0A0A0A",
+                    "borderColor": "#B0B0B0",
+                    "borderRadius": 6,
+                    "borderWidth": 1,
+                    "flexDirection": "row",
+                    "height": 50,
+                    "paddingHorizontal": 16,
+                  },
+                ]
+              }
+            >
+              <TextInput
+                autoCapitalize="none"
+                autoCorrect={false}
+                keyboardType="email-address"
+                onChangeText={[Function]}
+                placeholder="Enter your email"
+                placeholderTextColor="#B0B0B0"
+                style={
+                  {
+                    "color": "#DDDDDD",
+                    "flex": 1,
+                    "height": "100%",
+                  }
+                }
+                value=""
+              />
+            </View>
+          </View>
+          <View
+            style={
+              [
+                {
+                  "marginBottom": 24,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                [
+                  {
+                    "alignItems": "center",
+                    "backgroundColor": "#0A0A0A",
+                    "borderColor": "#B0B0B0",
+                    "borderRadius": 6,
+                    "borderWidth": 1,
+                    "flexDirection": "row",
+                    "height": 50,
+                    "paddingHorizontal": 16,
+                  },
+                ]
+              }
+            >
+              <TextInput
+                onChangeText={[Function]}
+                placeholder="Enter your password"
+                placeholderTextColor="#B0B0B0"
+                secureTextEntry={true}
+                style={
+                  {
+                    "color": "#DDDDDD",
+                    "flex": 1,
+                    "height": "100%",
+                  }
+                }
+                value=""
+              />
+            </View>
+          </View>
+          <View
+            style={
+              [
+                {
+                  "marginBottom": 16,
+                  "marginTop": 24,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                [
+                  {
+                    "width": "100%",
+                  },
+                ]
+              }
+            >
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    [
+                      {
+                        "alignItems": "center",
+                        "backgroundColor": "#6294CD",
+                        "borderRadius": 6,
+                        "flexDirection": "row",
+                        "height": 50,
+                        "justifyContent": "center",
+                        "paddingHorizontal": 24,
+                      },
+                      {},
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#ffffff",
+                          "fontSize": 16,
+                          "fontWeight": "600",
+                        },
+                      ]
+                    }
+                  >
+                    Sign In
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;

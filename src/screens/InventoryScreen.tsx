@@ -191,6 +191,7 @@ const InventoryScreen = ({ navigation, route }: Props) => {
           </Box>
           {route.params.mode === 'edit' && (
             <Button
+              testID="Delete"
               displayText="Delete Item"
               buttonProps={{
                 backgroundColor: 'danger',

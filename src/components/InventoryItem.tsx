@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '@shopify/restyle';
 import React from 'react';
@@ -12,16 +11,17 @@ import Text from './Text';
 
 interface Props {
   item: InventoryItemType;
+  navigation: NativeStackNavigationProp<MainStack, 'InventoryList'>;
 }
 
-const InventoryItem = ({ item }: Props) => {
+const InventoryItem = ({ item, navigation }: Props) => {
   const theme = useTheme<Theme>();
   const { foreground } = theme.colors;
-  const navigation = useNavigation<NativeStackNavigationProp<MainStack, any>>();
 
   return (
     <Box marginBottom="m">
       <TouchableOpacity
+        testID="inventory-item"
         onPress={() =>
           navigation.navigate('Inventory', {
             mode: 'edit',

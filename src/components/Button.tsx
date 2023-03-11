@@ -11,6 +11,7 @@ interface Props {
   onPress?: () => void;
   buttonProps?: BoxProps<Theme>;
   displayText?: string;
+  testID?: string;
   children?: ReactNode;
   loading?: boolean;
   style?: ViewStyle;
@@ -25,13 +26,14 @@ const Button = ({
   children,
   loading,
   style,
+  testID,
   textProps,
 }: Props) => {
   const theme = useTheme<Theme>();
 
   return (
     <Box width="100%" {...containerProps}>
-      <TouchableOpacity disabled={loading} onPress={onPress}>
+      <TouchableOpacity disabled={loading} onPress={onPress} testID={testID}>
         <Box
           height={50}
           backgroundColor="primary"

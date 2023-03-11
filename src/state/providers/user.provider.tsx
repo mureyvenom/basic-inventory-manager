@@ -10,7 +10,7 @@ const defaultValue: UserContextType = {
   setUser: () => {},
 };
 
-const UserContext = createContext<UserContextType>(defaultValue);
+export const UserContext = createContext<UserContextType>(defaultValue);
 
 export const UserProvider = ({ children }: ProviderProps) => {
   const [email, setEmail] = useState('');

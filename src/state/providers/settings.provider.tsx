@@ -8,7 +8,7 @@ const defaultValue: SettingsContextType = {
   toggleDarkMode: () => {},
 };
 
-const SettingsContext = createContext<SettingsContextType>(defaultValue);
+export const SettingsContext = createContext<SettingsContextType>(defaultValue);
 
 export const SettingsProvider = ({ children }: ProviderProps) => {
   const [darkmode, setDarkMode] = useState(true);

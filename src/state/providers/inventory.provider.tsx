@@ -24,7 +24,8 @@ const defaultValue: InventoryContextType = {
   getItems: () => [],
 };
 
-const InventoryContext = createContext<InventoryContextType>(defaultValue);
+export const InventoryContext =
+  createContext<InventoryContextType>(defaultValue);
 
 export const InventoryProvider = ({ children }: ProviderProps) => {
   const [items, setItems] = useState<InventoryItem[] | null>(null);
@@ -37,7 +38,7 @@ export const InventoryProvider = ({ children }: ProviderProps) => {
 
   const addItem = useCallback(
     (item: InventoryItem) => {
-      const nameTaken = items!.find(i => i.name === item.name);
+      const nameTaken = items!?.find(i => i.name === item.name);
       if (nameTaken) {
         Toast.show({
           type: 'error',
@@ -55,7 +56,7 @@ export const InventoryProvider = ({ children }: ProviderProps) => {
 
   const updateItem = useCallback(
     (original: InventoryItem, replace: InventoryItem) => {
-      const nameTaken = items!.find(i => i.name === replace.name);
+      const nameTaken = items!?.find(i => i.name === replace.name);
       const noNameChange = original.name === replace.name;
       if (nameTaken && !noNameChange) {
         Toast.show({
@@ -88,7 +89,7 @@ export const InventoryProvider = ({ children }: ProviderProps) => {
   );
 
   const getItems = useCallback(() => {
-    return items!.filter(i => i.owner === user.email);
+    return items!?.filter(i => i.owner === user.email) || [];
   }, [items, user]);
 
   useEffect(() => {
