@@ -5,6 +5,6 @@ export type MainStack = {
   InventoryList: undefined;
   Inventory: {
     mode: 'add' | 'edit';
-    inventory?: InventoryItem;
+    item?: InventoryItem;
   };
 };

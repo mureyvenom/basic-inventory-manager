@@ -13,12 +13,14 @@ import MainStack from './src/navigators/MainStack';
 import { useSettingsContext } from './src/state/providers/settings.provider';
 import RootProvider from './src/state/root.provider';
 import theme, { lightTheme, Theme } from './src/utils/theme';
+import Toast from 'react-native-toast-message';
 
 /* istanbul ignore next */
 const RootNav = () => {
   const navigationRef = useRef(null);
   const themex = useTheme<Theme>();
   const { background } = themex.colors;
+  const { darkmode } = useSettingsContext();
 
   return (
     <NavigationContainer
@@ -31,7 +33,10 @@ const RootNav = () => {
       }}
       ref={navigationRef}>
       {Platform.OS === 'android' && (
-        <StatusBar barStyle={'light-content'} backgroundColor={background} />
+        <StatusBar
+          barStyle={darkmode ? 'light-content' : 'dark-content'}
+          backgroundColor={background}
+        />
       )}
       <MainStack />
     </NavigationContainer>
@@ -45,6 +50,7 @@ const ThemeHandler = () => {
   return (
     <ThemeProvider theme={darkmode ? theme : lightTheme}>
       <RootNav />
+      <Toast />
     </ThemeProvider>
   );
 };

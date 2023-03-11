@@ -23,6 +23,7 @@ module.exports = {
             usePrettierrc: true,
           },
         ],
+        radix: 'off',
       },
     },
   ],

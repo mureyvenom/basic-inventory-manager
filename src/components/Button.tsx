@@ -37,6 +37,7 @@ const Button = ({
           backgroundColor="primary"
           flexDirection="row"
           justifyContent="center"
+          paddingHorizontal="l"
           alignItems="center"
           borderRadius={6}
           {...buttonProps}
